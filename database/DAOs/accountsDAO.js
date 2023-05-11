@@ -35,7 +35,7 @@ export default class AccountsDAO {
     let query;
     if (filters) {
       if ("accountId" in filters) {
-        query = { $text: { $search: filters["accountId"] } };
+        query = { accountId: { $search: filters["accountId"] } };
       }
     }
 
