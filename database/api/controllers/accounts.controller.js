@@ -133,10 +133,10 @@ export default class AccountsController {
       }
 
       /* return the response as JSON - D.D. */
-      res.json({ status: "success" });
+      return res.json({ status: "success" });
     } catch (e) {
       console.log(req.body);
-      res.status(500).json({ error: e.message });
+      return res.status(500).json({ error: e.message });
     }
   }
 
